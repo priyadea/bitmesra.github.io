@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ece department</title>
+ <link rel="stylesheet" href="style.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var boxes = document.querySelectorAll('.box');
+      boxes.forEach(function(box) {
+        box.addEventListener('click', function() {
+          box.classList.toggle('active');
+        });
+      });
+
+      var cards = document.querySelectorAll('.card');
+      cards.forEach(function(card) {
+        card.addEventListener('click', function() {
+          var url = card.getAttribute('data-url');
+          if (url) {
+            window.location.href = url;
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>ECE Department</h1>
+  </header>
+  
+  <main>
+    <div class="box">
+      <h3>I <sup>st</sup> year</h3>
+      <div class="card-container">
+        <div class="card" data-url="p1.html">
+          <h4>Sem 1</h4>
+          <p> Sem 1 goes here.</p>
+        </div>
+        <div class="card" data-url="page2.html">
+          <h4>Sem 2</h4>
+          <p> Sem 2 goes here.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3>II <sup>nd</sup> year</h3>
+      <div class="card-container">
+        <div class="card" data-url="page3.html">
+          <h4>Sem 1</h4>
+          <p> Sem 1 goes here.</p>
+        </div>
+        <div class="card" data-url="page4.html">
+          <h4>Sem 2</h4>
+          <p>Sem 2 goes here.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h3>III<sup>rd</sup> year</h3>
+      <div class="card-container">
+        <div class="card" data-url="page5.html">
+          <h4>Sem 1</h4>
+          <p>Sem 1 goes here.</p>
+        </div>
+        <div class="card" data-url="page6.html">
+          <h4>Sem 2</h4>
+          <p> Sem 2 goes here.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+     <h3>IV<sup>th</sup> year</h3>
+      <div class="card-container">
+        <div class="card" data-url="page7.html">
+          <h4>Sem 1</h4>
+          <p> Sem 1 goes here.</p>
+        </div>
+        <div class="card" data-url="page8.html">
+          <h4>Sem 2</h4>
+          <p>Sem 2 goes here.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Cards</title>
+ <link rel="stylesheet" href="style.css">
+
+  <style>
+  .container {
+      display: flex;
+    }
+     .pdf-container {
+      width: 50%;
+      height: 100vh;
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="card" onclick="openPDF('m&m.pdf')">
+        <h3>microprocessors and microcontrollers lab</h3>
+        <p>This is the content of MP&MC Lab.</p>
+      </div>
+
+      <div class="card" onclick="openPDF('spt.pdf')">
+        <h3>signal and processing lab</h3>
+        <p>This is the content of S&P Lab.</p>
+      </div>
+        <div class="card" onclick="openPDF('vlsi.pdf')">
+        <h3>VLSI Lab</h3>
+        <p>This is the content of VLSI Lab.</p>
+      </div>
+    </div>
+
+    <div class="pdf-container">
+      <iframe id="pdf-viewer" src="" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <script>
+    function openPDF(pdfFile) {
+      document.getElementById('pdf-viewer').src = pdfFile;
+    }
+  </script>
+</body>
+</html>
